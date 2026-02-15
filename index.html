@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="legend-watermark">FREEMIND CODING</div>
 
     <div id="loader">
         <img src="a.png" alt="Loading Logo" class="logo-animation">
@@ -269,6 +270,42 @@
         text-transform: uppercase;
         letter-spacing: 4px;
         text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    }
+        /* SUPREME GLOW WATERMARK */
+.legend-watermark {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-35deg); /* Diagonal position */
+    font-family: 'Orbitron', sans-serif;
+    font-size: clamp(3rem, 15vw, 10rem); /* Responsive size */
+    font-weight: 900;
+    z-index: -1; /* Text ke piche rahega */
+    white-space: nowrap;
+    pointer-events: none; /* Buttons par click karne mein rukawat nahi banega */
+    user-select: none;
+    opacity: 0.12; /* Isse aghe ke words clearly dikhenge */
+    
+    /* 5 Supreme Colors Gradient */
+    background: linear-gradient(45deg, #00ffcc, #0077ff, #ff00ff, #9d00ff, #00ff88);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    /* Animation & Glow */
+    animation: supremeWave 8s ease infinite, neonPulse 3s ease-in-out infinite;
+    filter: drop-shadow(0 0 20px rgba(0, 255, 204, 0.3));
+}
+
+@keyframes supremeWave {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes neonPulse {
+    0%, 100% { filter: drop-shadow(0 0 10px rgba(0, 255, 204, 0.2)); }
+    50% { filter: drop-shadow(0 0 30px rgba(0, 255, 204, 0.6)); }
     }
 </style>
 
