@@ -271,31 +271,28 @@
         letter-spacing: 4px;
         text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
     }
-        /* SUPREME GLOW WATERMARK */
+/* IS CSS KO PURANE WATERMARK CSS SE REPLACE KAREIN */
 .legend-watermark {
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) rotate(-35deg); /* Diagonal position */
+    transform: translate(-50%, -50%) rotate(-30deg);
     font-family: 'Orbitron', sans-serif;
-    font-size: clamp(3rem, 15vw, 10rem); /* Responsive size */
+    font-size: clamp(2rem, 10vw, 8rem); /* Chota kiya hai taaki mobile par fit aaye */
     font-weight: 900;
-    z-index: -1; /* Text ke piche rahega */
-    white-space: nowrap;
-    pointer-events: none; /* Buttons par click karne mein rukawat nahi banega */
+    z-index: -1;
+    pointer-events: none;
     user-select: none;
-    opacity: 0.12; /* Isse aghe ke words clearly dikhenge */
+    opacity: 0.1; /* Thoda aur light kiya hai taaki text saaf dikhe */
+    text-align: center;
+    width: 100%; /* Mobile compatibility ke liye */
     
-    /* 5 Supreme Colors Gradient */
     background: linear-gradient(45deg, #00ffcc, #0077ff, #ff00ff, #9d00ff, #00ff88);
-    background-size: 400% 400%;
+    background-size: 300% 300%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    
-    /* Animation & Glow */
-    animation: supremeWave 8s ease infinite, neonPulse 3s ease-in-out infinite;
-    filter: drop-shadow(0 0 20px rgba(0, 255, 204, 0.3));
-}
+    animation: supremeWave 8s ease infinite;
+        }
 
 @keyframes supremeWave {
     0% { background-position: 0% 50%; }
